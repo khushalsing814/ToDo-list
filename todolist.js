@@ -1,15 +1,20 @@
 update();
 document.getElementsByClassName('addtask')[0].addEventListener('focus', function () {
-    this.style.color = "red";
+    this.style.color = "black";
     this.style.background = "lightblue";
 });
 
 document.getElementsByClassName('addtask')[0].addEventListener('blur', addtaskk);
 function addtaskk() {
-    this.style.color = "white";
+    this.style.color = "black";
     this.style.background = "white";
     let tt = document.getElementById('addtaskinput').value;
     document.getElementById('s').innerHTML = tt;
+}
+document.getElementsByClassName('addtask')[0].addEventListener('blur', addtaskk);
+function addtaskk() {
+    let tt = document.getElementById('addtaskinput').value;
+    document.getElementById('s').innerHTML = tt.toUpperCase();
 }
 
 document.getElementById('addtaskbtn').addEventListener('click', insertData);
