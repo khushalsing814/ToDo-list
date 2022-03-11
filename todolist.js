@@ -11,7 +11,7 @@ function addtaskk() {
     let tt = document.getElementById('addtaskinput').value;
     document.getElementById('s').innerHTML = tt;
 }
-document.getElementsByClassName('addtask')[0].addEventListener('blur', addtaskk);
+document.getElementsByClassName('addtask')[0].addEventListener('input', addtaskk);
 function addtaskk() {
     let tt = document.getElementById('addtaskinput').value;
     document.getElementById('s').innerHTML = tt.toUpperCase();
