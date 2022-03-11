@@ -1,0 +1,19 @@
+
+    .text {
+        color: red;
+    }
+
+    #savetaskbutton {
+        position: absolute;
+        margin-inline: 560px;
+    }
+
+    #root tbody {
+        text-align: center;
+    }
+
+    button {
+        width: 4rem;
+        font-size: 12px;
+        padding-block: 4px;
+    }
