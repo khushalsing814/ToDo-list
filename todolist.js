@@ -4,12 +4,12 @@ document.getElementsByClassName('addtask')[0].addEventListener('focus', function
     this.style.background = "lightblue";
 });
 
-document.getElementsByClassName('addtask')[0].addEventListener('blur', addtaskk);
-function addtaskk() {
+document.getElementsByClassName('addtask')[0].addEventListener('blur', addtaskkk);
+function addtaskkk() {
     this.style.color = "black";
     this.style.background = "white";
     let tt = document.getElementById('addtaskinput').value;
-    document.getElementById('s').innerHTML = tt;
+    document.getElementById('s').innerHTML = tt.toUpperCase();
 }
 document.getElementsByClassName('addtask')[0].addEventListener('input', addtaskk);
 function addtaskk() {
@@ -68,25 +68,22 @@ function update() {
 
 }
 
-
 function editdata(index) {
     let saveindex = document.getElementById('saveindex');
     let addtaskbtn = document.getElementById('addtaskbtn');
     let savetaskbtn = document.getElementById('savetaskbutton');
-
-   let ss= saveindex.value = index;
-
+    let ss = saveindex.value = index;
     let arrystr = localStorage.getItem('InsertData');
     let arry = JSON.parse(arrystr);
-
     let add = addtaskinput.value = arry[index];
-
     addtaskbtn.style.display = "none";
-    savetaskbtn.style.display = "block";
+    savetaskbtn.style.display = "inline-block";
+    document.getElementById('alldelete').style.marginLeft = "50px";
     localStorage.setItem('InsertData', JSON.stringify(arry));
 }
 
 function itemDeleted(index) {
+    alert("Are you Sure "); 
     arrystr = localStorage.getItem('InsertData');
     arry = JSON.parse(arrystr);
     arry.splice(index, 1);
@@ -106,7 +103,7 @@ savetaskbtn.addEventListener("click", function () {
 
     localStorage.setItem('InsertData', JSON.stringify(arry));
     savetaskbtn.style.display = "none";
-    addtaskbtn.style.display = "margin-inline-block";
+    addtaskbtn.style.display = "inline-block";
     addtaskinput.value = '';
 });
 update();
