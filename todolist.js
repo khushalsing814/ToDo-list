@@ -9,8 +9,9 @@ function addtaskkk() {
     this.style.color = "black";
     this.style.background = "white";
     let tt = document.getElementById('addtaskinput').value;
-     document.getElementById('s').style.color="blue";
     document.getElementById('s').innerHTML = tt.toUpperCase();
+    document.getElementById('s').style.color="blue";
+
 }
 
 document.getElementsByClassName('addtask')[0].addEventListener('input', addtaskk);
