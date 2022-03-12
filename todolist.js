@@ -62,8 +62,12 @@ function update() {
     tablebody.innerHTML = str;
 
     if (str == 0) {
-        let tablebodyy = document.querySelector('tbody');
-        tablebodyy.textContent = "sorry!!! No Data Found ";
+        let tablebodyy = document.querySelector('tr');
+        tablebodyy.style.textAlign="center";
+        tablebodyy.textContent = "Sorry!!! No Data Found";
+        tablebodyy.style.fontWeight="700";
+        tablebodyy.style.color="red";
+
     }
 
 }
