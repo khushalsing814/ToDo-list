@@ -3,11 +3,6 @@
         color: red;
     }
 
-    #savetaskbutton {
-        position: absolute;
-        margin-inline: 560px;
-    }
-
     #root tbody {
         text-align: center;
     }
@@ -17,3 +12,9 @@
         font-size: 12px;
         padding-block: 4px;
     }
+
+@media only screen and (max-width:600px){
+   #savetaskbutton{
+
+   } 
+}

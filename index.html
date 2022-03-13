@@ -21,17 +21,21 @@
         <div class="text-center">
             <h3>ToDo List</h3>
             <form>
-              <input type="text" class="addtask text-center" id="addtaskinput" placeholder="Enter Your Title" ><br><br>
-                <input type="hidden" id="saveindex">
-                <textarea name="" id="s"  class="text-center" cols="10" rows="10" style="width: 278px; height: 58px;"
-                    placeholder=" Your Title is Showing in this Field"></textarea><br><br>
-               <div class="text-center">
-                <input type="submit" class="btn btn-sm btn-primary" value="Submit" id="addtaskbtn">
-                <input type="submit" class="btn btn-sm btn-success" value="Edit" id="savetaskbutton"
-                    style="display: none; right: 230px;">
-                <input type="submit" class="btn btn-sm btn-danger"value="All Delete" id="alldelete"><br><br>
-            </div>
-                <div class="text"></div>
+                <div>
+                    <input type="text" class="addtask text-center" id="addtaskinput" placeholder="Enter Your Title"><b><span class="text"></span></b><br><br>
+                    <input type="hidden" id="saveindex">
+                </div>
+                <div>
+                    <textarea name="" id="s" class="text-center" cols="10" rows="10" style="width: 278px; height: 58px;"
+                        placeholder=" Your Title is Showing in this Field"></textarea><br><br>
+                </div>
+                <div class="conatiner text-center">
+                    <input type="submit" class="btn btn-sm btn-primary" value="Submit" id="addtaskbtn">
+                    <input type="submit" class="btn btn-sm btn-success" value="Edit" id="savetaskbutton"
+                        style="display:none; margin-right: -50px;">
+                    <input type="submit" class="btn btn-sm btn-danger" value="All Delete" id="alldelete"><br><br>
+                </div>
+                <div class="alert alert-danger text-center" id="results" role="alert" style="visibility: hidden;"></div>
             </form>
         </div>
     </div>

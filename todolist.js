@@ -10,7 +10,7 @@ function addtaskkk() {
     this.style.background = "white";
     let tt = document.getElementById('addtaskinput').value;
     document.getElementById('s').innerHTML = tt.toUpperCase();
-    document.getElementById('s').style.color="blue";
+    document.getElementById('s').style.color = "blue";
 
 }
 
@@ -19,6 +19,15 @@ function addtaskk() {
     let tt = document.getElementById('addtaskinput').value;
     document.getElementById('s').innerHTML = tt.toUpperCase();
 }
+
+// document.getElementById('addtaskinput').addEventListener('input', function () {
+//     let addtaskinput = document.getElementById('addtaskinput');
+//     let letter = /^[a-zA-Z]+$/;
+//     if (!addtaskinput.value.match(letter)) {
+//         document.getElementsByClassName('text')[0].innerHTML = "Sorry not Allowed Numeric Numbers";
+//         return false;
+//     }
+// });
 
 document.getElementById('addtaskbtn').addEventListener('click', insertData);
 function insertData() {
@@ -66,10 +75,10 @@ function update() {
 
     if (str == 0) {
         let tablebodyy = document.querySelector('tr');
-        tablebodyy.style.textAlign="center";
+        tablebodyy.style.textAlign = "center";
         tablebodyy.textContent = "Sorry!!! No Data Found";
-        tablebodyy.style.fontWeight="700";
-        tablebodyy.style.color="red";
+        tablebodyy.style.fontWeight = "700";
+        tablebodyy.style.color = "red";
 
     }
 
@@ -90,7 +99,7 @@ function editdata(index) {
 }
 
 function itemDeleted(index) {
-    alert("Are you Sure "); 
+    alert("Are you Sure ");
     arrystr = localStorage.getItem('InsertData');
     arry = JSON.parse(arrystr);
     arry.splice(index, 1);
