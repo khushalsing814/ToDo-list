@@ -99,11 +99,13 @@ function editdata(index) {
 }
 
 function itemDeleted(index) {
-    alert("Are you Sure ");
-    arrystr = localStorage.getItem('InsertData');
-    arry = JSON.parse(arrystr);
-    arry.splice(index, 1);
-    localStorage.setItem('InsertData', JSON.stringify(arry));
+    let checkvalue = confirm("Are you Sure");
+    if (checkvalue != false) {
+        arrystr = localStorage.getItem('InsertData');
+        arry = JSON.parse(arrystr);
+        arry.splice(index, 1);
+        localStorage.setItem('InsertData', JSON.stringify(arry));
+    }
     update();
 }
 
@@ -126,8 +128,10 @@ update();
 
 document.getElementById('alldelete').addEventListener('click', alldelete);
 function alldelete() {
-    alert("Are you Sure ");
-    localStorage.clear();
+    let check = confirm("Are You Sure")
+    if (check != false) {
+        localStorage.clear();
+    }
 }
 
 const searchfunction = () => {
