@@ -114,7 +114,6 @@ savetaskbtn.addEventListener("click", function () {
     let addtaskbtn = document.getElementById("addtaskbtn");
     let addtaskinput = document.getElementById('addtaskinput');
     let saveIndex = document.getElementById("saveindex").value;
-
     let arrystr = localStorage.getItem('InsertData');
     let arry = JSON.parse(arrystr);
     let l = arry[saveIndex] = addtaskinput.value;
